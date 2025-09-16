@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h2 className="text-2xl font-bold text-white mb-4">MyShop</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">E-commerce</h2>
             <p className="text-sm text-gray-400">
               Quality products and the best service. Shopping with us is easy
               and reliable.

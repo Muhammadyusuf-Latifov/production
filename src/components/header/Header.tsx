@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-7 py-4 flex items-center justify-between">
-        <div className="text-2xl font-bold text-green-600">MyShop</div>
+        <div className="text-2xl font-bold text-green-600">E-commerce</div>
 
         <nav className="hidden  md:flex space-x-8 font-medium text-gray-700">
           <div className="flex items-center gap-[24px]">

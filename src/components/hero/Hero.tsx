@@ -20,6 +20,10 @@ const Hero: FC<Props> = ({ data }) => {
           navigation={true}
           loop={true}
           modules={[Navigation]}
+          autoplay={{
+            delay: 2000, 
+            disableOnInteraction: false, 
+          }}
           className="mySwiper "
         >
           {data?.map((item: any) =>
