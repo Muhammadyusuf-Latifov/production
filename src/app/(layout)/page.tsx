@@ -4,7 +4,7 @@ import { memo } from "react";
 
 const Home = async () => {
   const response = await fetch(
-    "https://api.errorchi.uz/product?limit=8&skip=16 ", {next:{revalidate:60}}
+    "https://api.errorchi.uz/product?limit=8 ", {next:{revalidate:60}}
   );
   const data = await response.json();
   const allData = data?.data;
