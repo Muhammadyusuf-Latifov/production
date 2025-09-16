@@ -19,3 +19,11 @@
   --swiper-navigation-color: #ddd;
   --swiper-navigation-size: 18px;
 }
+.link{
+    font-size: 18px;
+    transition: .3s;
+}
+.link:hover{
+    color: rgb(7, 153, 7);
+
+}
