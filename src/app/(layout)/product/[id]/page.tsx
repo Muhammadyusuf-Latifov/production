@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { memo } from "react";
 import no from "@/assets/noImage.jpg";
-const Detail = async ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+const Detail = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
 
   const response = await fetch(`https://api.errorchi.uz/product/${id}`);
 
