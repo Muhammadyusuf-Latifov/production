@@ -7,7 +7,7 @@ const ProductImage: FC<props> = ({ rasm, id}) => {
     console.log(rasm);
     
   return (
-    
+    <></>
   );
 };
 
