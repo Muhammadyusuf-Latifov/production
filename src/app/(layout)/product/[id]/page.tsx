@@ -1,0 +1,70 @@
+import Image from "next/image";
+import { memo } from "react";
+import no from "@/assets/noImage.jpg";
+const Detail = async ({ params }: { params: { id: string } }) => {
+  const { id } = params;
+
+  const response = await fetch(`https://api.errorchi.uz/product/${id}`);
+
+  const data = await response.json();
+  const info = data?.data;
+
+  return (
+    <section className="min-h-[600px] py-10 bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="max-w-[1000px] mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white rounded-2xl shadow-lg p-6">
+          <div className="flex items-center justify-center">
+            <Image
+              src={
+                info?.images?.length
+                  ? "https://api.errorchi.uz/product/image/" + info?.images[0]
+                  : no
+              }
+              width={400}
+              height={400}
+              alt={info?.title || "Product image"}
+              className="rounded-xl object-cover shadow-md w-[100%] h-[350px]"
+            />
+          </div>
+
+          <div className="flex flex-col justify-between">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                {info?.title}
+              </h1>
+              <p className="text-lg text-gray-600 mb-4">{info?.description}</p>
+
+              <ul className="space-y-2 text-gray-700">
+                <li>
+                  <span className="font-semibold">Brand:</span> {info?.brand}
+                </li>
+                <li>
+                  <span className="font-semibold">Category:</span>{" "}
+                  {info?.category?.name}
+                </li>
+                <li>
+                  <span className="font-semibold">Stock:</span> {info?.stock}
+                </li>
+                <li>
+                  <span className="font-semibold">Seller:</span>
+                  {info?.user?.fname} ({info?.user?.email})
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-6 flex items-center justify-between">
+              <span className="text-2xl font-bold text-green-600">
+                ${info?.price?.toLocaleString()}
+              </span>
+              <button className="px-6 py-2 rounded-xl bg-green-600 text-white font-medium hover:bg-green-700 transition">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default memo(Detail);

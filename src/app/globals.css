@@ -1,2 +1,21 @@
 @import "tailwindcss";
+.container {
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 32px !important;
+  height: 32px !important;
+}
 
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  color: #ffffff !important;
+}
+.mySwiper {
+  --swiper-navigation-color: #ddd;
+  --swiper-navigation-size: 18px;
+}
