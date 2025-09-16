@@ -8,21 +8,23 @@ interface Product {
   title: string;
   description: string;
   price: number;
-  category: Category
-  
+  category: Category;
+
   images: string[];
 }
 
 interface ProductViewProps {
   data: Product[];
-  subTitle: string
+  subTitle: string;
 }
 
-const ProductView = ({ data,subTitle }: ProductViewProps) => {
+const ProductView = ({ data, subTitle }: ProductViewProps) => {
   return (
     <section className=" ">
       <div className="container">
-        <h2 className="text-center text-[30px] font-medium text-green-600 mt-[50px] mb-[30px]">{ subTitle}</h2>
+        <h2 className="text-center text-[30px] font-medium text-green-600 mt-[50px] mb-[30px]">
+          {subTitle}
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] p-8  ">
           {data?.map((item) => (
             <div
@@ -41,7 +43,9 @@ const ProductView = ({ data,subTitle }: ProductViewProps) => {
                 <h3 className="text-xl font-semibold text-gray-900 line-clamp-1">
                   {item.title}
                 </h3>
-                <p className="text-green-600 font-medium">{item.category.name}</p>
+                <p className="text-green-600 font-medium">
+                  {item.category.name}
+                </p>
                 <p className="text-sm text-gray-600 line-clamp-3 mt-2 flex-1">
                   {item.description}
                 </p>
@@ -58,6 +62,7 @@ const ProductView = ({ data,subTitle }: ProductViewProps) => {
             </div>
           ))}
         </div>
+       
       </div>
     </section>
   );
