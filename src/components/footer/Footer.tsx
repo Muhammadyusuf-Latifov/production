@@ -1,95 +1,191 @@
-import { memo } from "react";
-
-const Footer = () => {
+import React from "react";
+import { Facebook, Twitter, Instagram, Github } from "lucide-react";
+import a from "@/assets/Badge.svg";
+import b from "@/assets/Badge (1).svg";
+import c from "@/assets/Badge (2).svg";
+import d from "@/assets/Badge (3).svg";
+import e from "@/assets/Badge (4).svg";
+import Image from "next/image";
+export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-10 ">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <h2 className="text-2xl font-bold text-white mb-4">E-commerce</h2>
-            <p className="text-sm text-gray-400">
-              Quality products and the best service. Shopping with us is easy
-              and reliable.
-            </p>
+    <footer className="bg-white border-t relative border-gray-200 ">
+      <div className="px-[120px] absolute top-[-90px] left-[50%] -translate-x-1/2 w-[100%]">
+        <div className="container rounded-[28px] bg-black text-white py-10 ">
+          <div className="flex items-center justify-between px-[80px]">
+            <h3 className="title text-[40px] font-extrabold  w-[40%]">
+              Stay up to date about our latest offers
+            </h3>
+            <form className="flex flex-col w-full max-w-md">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 rounded-full px-4 py-3 text-sm text-gray-800 focus:outline-none bg-[#fff] mb-[14px]"
+              />
+              <button
+                type="submit"
+                className="rounded-full bg-white text-black  py-3 text-sm font-medium hover:bg-gray-100 px-[80px]"
+              >
+                Subscribe to Newsletter
+              </button>
+            </form>
           </div>
+        </div>
+      </div>
 
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Sections</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-green-400">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-green-400">
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-green-400">
-                  Deals
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-green-400">
-                  About Us
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Help</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-green-400">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-green-400">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-green-400">
-                  Shipping
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-green-400">
-                  Returns
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-green-400">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="hover:text-green-400">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="hover:text-green-400">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#" className="hover:text-green-400">
-                <i className="fab fa-telegram"></i>
-              </a>
-            </div>
+      <div className="max-w-7xl mx-auto px-6 py-12 pt-[180px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm text-gray-600">
+        <div className="col-span-2 sm:col-span-1">
+          <h2 className="text-xl font-bold text-gray-900">E-commerce</h2>
+          <p className="mt-4 text-sm text-gray-500 max-w-xs">
+            We have clothes that suits your style and which you’re proud to
+            wear. From women to men.
+          </p>
+          <div className="flex gap-3 mt-4">
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100"
+            >
+              <Twitter />
+            </a>
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100"
+            >
+              <Facebook />
+            </a>
+            <a
+              href="#"
+              aria-label="Twitter"
+              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100"
+            >
+              <Instagram />
+            </a>
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100"
+            >
+              <Github />
+            </a>
           </div>
         </div>
 
-        <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} MyShop. All rights reserved.
+        <div>
+          <h4 className="font-semibold text-gray-900">Company</h4>
+          <ul className="mt-4 space-y-2">
+            <li>
+              <a href="#" className="hover:underline">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Features
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Works
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Career
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-gray-900">Help</h4>
+          <ul className="mt-4 space-y-2">
+            <li>
+              <a href="#" className="hover:underline">
+                Customer Support
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Delivery Details
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Terms & Conditions
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-gray-900">FAQ</h4>
+          <ul className="mt-4 space-y-2">
+            <li>
+              <a href="#" className="hover:underline">
+                Account
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Manage Deliveries
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Orders
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Payments
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-gray-900">Resources</h4>
+          <ul className="mt-4 space-y-2">
+            <li>
+              <a href="#" className="hover:underline">
+                Free eBooks
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Development Tutorial
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                How to - Blog
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Youtube Playlist
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-gray-200 py-6 px-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 gap-4">
+        <p>Shop.co © 2025. All Rights Reserved</p>
+        <div className="flex items-center gap-3">
+         <Image src={a} alt="visa"/>
+         <Image src={b} alt="visa"/>
+         <Image src={c} alt="visa"/>
+         <Image src={d} alt="visa"/>
+         <Image src={e} alt="visa"/>
         </div>
       </div>
     </footer>
   );
-};
-
-export default memo(Footer);
+}

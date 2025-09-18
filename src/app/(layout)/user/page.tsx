@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 const User = () => {
   return (
-    <div className="Page">
+    <div className="Page min-h-[500px]">
       <h2>Page</h2>
     </div>
   );

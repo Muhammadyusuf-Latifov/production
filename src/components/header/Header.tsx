@@ -2,18 +2,36 @@
 import { useState } from "react";
 import { Menu, X, ShoppingCart, User, Search } from "lucide-react";
 import Link from "next/link";
-import { WindArrowDown } from "lucide";
+import { IoSearchOutline } from "react-icons/io5";
+import { LuShoppingCart, LuCircleUser } from "react-icons/lu";
 
 const Header = () => {
   const handleGo = () => {
     window.open("https://project-two-olive.vercel.app/login");
   };
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-7 py-4 flex items-center justify-between">
-        <div className="text-2xl font-bold text-green-600">E-commerce</div>
+    <>
+      <div className="bg-[#000]">
+        <nav className="container flex items-center justify-center py-[14px]">
+          <p className="text-[#fff]">
+            Sign up and get 20% off to your first order.
+            <span
+              className="hover:underline cursor-pointer"
+              onClick={() => handleGo()}
+            >
+              Sign Up Now
+            </span>
+          </p>
+        </nav>
+      </div>
 
-        <nav className="hidden  md:flex space-x-8 font-medium text-gray-700">
+      <header className="bg-white shadow-md sticky top-0 z-50">
+        <nav className="container  flex items-center justify-between font-medium text-gray-700 py-[24px]">
+          <div className="">
+            <h2 className="text-[#000] text-[32px] font-extrabold">
+              E-commerce
+            </h2>
+          </div>
           <div className="flex items-center gap-[24px]">
             <Link className="link" href="/">
               Home
@@ -24,16 +42,36 @@ const Header = () => {
             <Link className="link" href={"/user"}>
               User
             </Link>
+            <Link className="link" href={"/user"}>
+             Brands
+            </Link>
+          </div>
+          <div className=" flex items-center gap-[10px] max-w-[500px]  px-[16px] py-[12px] w-[100%] rounded-[30px] bg-[#F0F0F0]">
+            <IoSearchOutline className="text-[22px] text-[#00000066]" />
+            <input
+              type="text"
+              className="outline-0 flex-1"
+              placeholder="Search for products... "
+            />
+          </div>
+          <div className="flex items-center gap-[10px] text-[22px]">
+
+            <LuShoppingCart />
+            <LuCircleUser/>
+            
+          </div>
+
+          <div>
             <button
               onClick={() => handleGo()}
-              className="bg-green-600 rounded-[12px] text-[#fff] px-[20px] py-[8px]"
+              className="bg-[#000] rounded-[12px] text-[#fff] px-[20px] py-[8px]"
             >
               Sign In
             </button>
           </div>
         </nav>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 

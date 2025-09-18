@@ -11,7 +11,7 @@ const Home = async () => {
   console.log(allData);
 
   return (
-    <div className="Page pb-[70px] pt-[40px] bg-gradient-to-br from-gray-50 to-gray-200">
+    <div className="Page pb-[200px] pt-[40px] bg-gradient-to-br from-gray-50 to-gray-200">
       <Hero data={allData?.allProducts} />
       <ProductView data={allData?.allProducts} subTitle={"Products"} />
     </div>

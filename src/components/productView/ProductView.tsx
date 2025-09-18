@@ -22,7 +22,7 @@ const ProductView = ({ data, subTitle }: ProductViewProps) => {
   return (
     <section className=" ">
       <div className="container">
-        <h2 className="text-center text-[30px] font-medium text-green-600 mt-[50px] mb-[30px]">
+        <h2 className="text-center text-[30px]  text-[#000] font-extrabold mt-[50px] mb-[30px]">
           {subTitle}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] p-8  ">
