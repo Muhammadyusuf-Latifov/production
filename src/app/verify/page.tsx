@@ -2,8 +2,8 @@ import { memo } from 'react';
 
 const Verify = () => {
   return (
-    <div className="Verify">
-      <h2>Verifing...</h2>
+    <div className="Verify flex items-center justify-center h-screen">
+      <h2 className='text-[5rem]'>Verifing...</h2>
     </div>
   );
 };
