@@ -28,11 +28,11 @@ const Header = () => {
       <header className="bg-white shadow-md sticky top-0 z-50">
         <nav className="container  flex items-center justify-between font-medium text-gray-700 py-[24px]">
           <div className="">
-            <h2 className="text-[#000] text-[32px] font-extrabold">
+            <h2 className="text-[#000] text-[32px] font-extrabold max-[430px]:text-[24px]">
               E-commerce
             </h2>
           </div>
-          <div className="flex items-center gap-[24px]">
+          <div className="flex items-center gap-[24px] max-[700px]:hidden">
             <Link className="link" href="/">
               Home
             </Link>
@@ -46,7 +46,7 @@ const Header = () => {
              Brands
             </Link>
           </div>
-          <div className=" flex items-center gap-[10px] max-w-[500px]  px-[16px] py-[12px] w-[100%] rounded-[30px] bg-[#F0F0F0]">
+          <div className=" flex items-center gap-[10px] max-w-[500px]  px-[16px] py-[12px] w-[100%] rounded-[30px] bg-[#F0F0F0] max-[1170px]:hidden">
             <IoSearchOutline className="text-[22px] text-[#00000066]" />
             <input
               type="text"

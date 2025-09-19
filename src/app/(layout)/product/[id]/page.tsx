@@ -78,7 +78,7 @@ const Detail = async ({ params }: { params: Promise<{ id: string }> }) => {
           </div>
         </div>
         <div className="pb-[200px]">
-          <ProductView subTitle="Similar" data={similarData} />
+          <ProductView data={similarData} />
         </div>
       </div>
     </section>

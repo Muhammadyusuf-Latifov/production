@@ -21,7 +21,7 @@ const ProductImage: FC<props> = (props) => {
         alt={title || ""}
         height={300}
         loading="lazy"
-        className="w-full h-[250px] object-cover"
+        className=" w-full h-[300px] object-cover rounded-[20px] max-[500px]:h-[260px]"
       />
     </div>
   );
