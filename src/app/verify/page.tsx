@@ -1,9 +1,19 @@
-import { memo } from 'react';
+import VerifySection from "@/components/verifySection/VerifySection";
+import { memo } from "react";
 
-const Verify = () => {
+const Verify = async ({
+  searchParams,
+}: {
+  searchParams: Promise<{ q: string }>;
+}) => {
+  const { q } = await searchParams;
+  console.log(q);
+  const user = atob(q);
+  console.log(user);
+
   return (
-    <div className="Verify flex items-center justify-center h-screen">
-      <h2 className='text-[5rem]'>Verifing...</h2>
+    <div>
+      <VerifySection user={user} />
     </div>
   );
 };
