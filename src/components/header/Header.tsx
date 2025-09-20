@@ -4,6 +4,8 @@ import { Menu, X, ShoppingCart, User, Search } from "lucide-react";
 import Link from "next/link";
 import { IoSearchOutline } from "react-icons/io5";
 import { LuShoppingCart, LuCircleUser } from "react-icons/lu";
+import Me from "../me/Me";
+import SignIn from "../singinAndProfileButtons/SignIn";
 
 const Header = () => {
   const handleGo = () => {
@@ -11,6 +13,7 @@ const Header = () => {
   };
   return (
     <>
+      <Me/>
       <div className="bg-[#000]">
         <nav className="container flex items-center justify-center py-[14px]">
           <p className="text-[#fff]">
@@ -62,12 +65,7 @@ const Header = () => {
           </div>
 
           <div>
-            <button
-              onClick={() => handleGo()}
-              className="bg-[#000] rounded-[12px] text-[#fff] px-[20px] py-[8px]"
-            >
-              Sign In
-            </button>
+          <SignIn/>
           </div>
         </nav>
       </header>
