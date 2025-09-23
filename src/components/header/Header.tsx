@@ -9,7 +9,7 @@ import SignIn from "../singinAndProfileButtons/SignIn";
 
 const Header = () => {
   const handleGo = () => {
-    window.open("https://project-two-olive.vercel.app/login");
+    window.open("https://project-two-olive.vercel.app/login", "_blank");
   };
 
   return (

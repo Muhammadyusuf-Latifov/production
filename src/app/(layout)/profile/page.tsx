@@ -2,7 +2,7 @@ import { memo } from "react";
 
 const Profile = () => {
   return (
-    <div className="Profile ">
+    <div className="Profile min-h-[500px]">
       <h2>Profile </h2>
     </div>
   );

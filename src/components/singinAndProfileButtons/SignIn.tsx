@@ -28,10 +28,8 @@ const SignIn = () => {
   if (tokenCheck === null) {
     return (
       <div>
-        <LuCircleUser/>
+        <LuCircleUser />
       </div>
-      
-
     );
   }
 
@@ -44,7 +42,7 @@ const SignIn = () => {
       ) : (
         <div
           onClick={() =>
-            routes.push("https://project-two-olive.vercel.app/login")
+            window.open("https://project-two-olive.vercel.app/login", "_blank")
           }
         >
           <LuCircleUser />
