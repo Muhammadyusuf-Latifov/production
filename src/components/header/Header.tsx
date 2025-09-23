@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import { Menu, X, ShoppingCart, User, Search } from "lucide-react";
+
 import Link from "next/link";
 import { IoSearchOutline } from "react-icons/io5";
-import { LuShoppingCart, LuCircleUser } from "react-icons/lu";
+import { LuShoppingCart,  } from "react-icons/lu";
 import Me from "../me/Me";
 import SignIn from "../singinAndProfileButtons/SignIn";
 
@@ -11,9 +11,10 @@ const Header = () => {
   const handleGo = () => {
     window.open("https://project-two-olive.vercel.app/login");
   };
+
   return (
     <>
-      <Me/>
+      <Me />
       <div className="bg-[#000]">
         <nav className="container flex items-center justify-center py-[14px]">
           <p className="text-[#fff]">
@@ -31,9 +32,11 @@ const Header = () => {
       <header className="bg-white shadow-md sticky top-0 z-50">
         <nav className="container  flex items-center justify-between font-medium text-gray-700 py-[24px]">
           <div className="">
-            <h2 className="text-[#000] text-[32px] font-extrabold max-[430px]:text-[24px]">
-              E-commerce
-            </h2>
+            <Link href={"/"}>
+              <h2 className="text-[#000] text-[32px] font-extrabold max-[430px]:text-[24px]">
+                E-commerce
+              </h2>
+            </Link>
           </div>
           <div className="flex items-center gap-[24px] max-[700px]:hidden">
             <Link className="link" href="/">
@@ -46,7 +49,7 @@ const Header = () => {
               User
             </Link>
             <Link className="link" href={"/user"}>
-             Brands
+              Brands
             </Link>
           </div>
           <div className=" flex items-center gap-[10px] max-w-[500px]  px-[16px] py-[12px] w-[100%] rounded-[30px] bg-[#F0F0F0] max-[1170px]:hidden">
@@ -58,14 +61,8 @@ const Header = () => {
             />
           </div>
           <div className="flex items-center gap-[10px] text-[22px]">
-
             <LuShoppingCart />
-            <LuCircleUser/>
-            
-          </div>
-
-          <div>
-          <SignIn/>
+            <SignIn />
           </div>
         </nav>
       </header>

@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { memo, useEffect, useState } from "react";
-
+import { LuCircleUser } from "react-icons/lu";
 const SignIn = () => {
   const [tokenCheck, setTokenCheck] = useState<null | boolean>(null);
   const routes = useRouter();
@@ -11,10 +11,9 @@ const SignIn = () => {
       try {
         const res = await fetch("/api/auth/me");
         const data = await res.json();
-console.log(data?.data?.id);
+        console.log(data?.data?.id);
 
         if (res.ok && data?.data?.id) {
-          
           setTokenCheck(true);
         } else {
           setTokenCheck(false);
@@ -27,21 +26,29 @@ console.log(data?.data?.id);
   }, []);
 
   if (tokenCheck === null) {
-    return <><p>Sign In</p></> 
+    return (
+      <div>
+        <LuCircleUser/>
+      </div>
+      
+
+    );
   }
 
   return (
     <div>
       {tokenCheck ? (
-        <button onClick={() => routes.push("/profile")}>profile</button>
+        <div onClick={() => routes.push("/profile")}>
+          <LuCircleUser />
+        </div>
       ) : (
-        <button
+        <div
           onClick={() =>
-            routes.push("https://project-two-olive.vercel.app//login")
+            routes.push("https://project-two-olive.vercel.app/login")
           }
         >
-          sign in
-        </button>
+          <LuCircleUser />
+        </div>
       )}
     </div>
   );
